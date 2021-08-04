@@ -22,7 +22,6 @@ open(AAA,"3_2_stringent_and_un_merge.infor.txt");
 open(BBB,">3_3_stringent_and_un_merge.infor.highRisk.txt");
 open(CCC,">>0_results_ALS.gene_region.summary.txt");
 
-
 while($line=<AAA>){
     $n++;
     chomp $line;
@@ -33,7 +32,6 @@ while($line=<AAA>){
     @sta_end=split(/\-/,$pos[1]);
     $length=$sta_end[1]-$sta_end[0]+1;
     $loci_length=$loci_length+$length;
-    
     @gene=split(/\,/,$arraynum1[2]);
     @gene_non=split(/\,/,$arraynum1[5]);
     
@@ -41,7 +39,6 @@ while($line=<AAA>){
     my %gene_high_non;
     $gene_high_srt="";
     $gene_high_non_srt="";
-    
     $gene_high_num=0;
     $gene_high_non_num=0;
 
